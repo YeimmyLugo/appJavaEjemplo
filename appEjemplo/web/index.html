@@ -8,8 +8,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <title>Hello world</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function saludar() {
+              var nombre = document.getElementById("nombre").value;
+              var mensaje = "¡Hola, " + nombre + "! Bienvenido(a).";
+              document.getElementById("saludo").textContent = mensaje;
+            }
+        </script>
     </head>
     <body>
-        <div>TODO write content</div>
+        <h1>Bienvenido(a) a la App de Bienvenida</h1>
+        <p>Ingresa tu nombre:</p>
+        <input type="text" id="nombre" />
+        <button onclick="saludar()">Saludar</button>
+        <p id="saludo"></p>
     </body>
 </html>
